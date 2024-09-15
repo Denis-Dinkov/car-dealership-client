@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+.footer a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  font-size: x-small;
+}

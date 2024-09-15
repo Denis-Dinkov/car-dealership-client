@@ -8,7 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* <App /> */}
     <RouterProvider router={Routes} />
+    <App />
   </StrictMode>,
 );
