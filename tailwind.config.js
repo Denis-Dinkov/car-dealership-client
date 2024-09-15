@@ -13,7 +13,7 @@ export default {
         },
         'dev-dark': {
           100: '#050B20'
-        }
+        },
         "dev-green": {
           100: "#3D923A"
         }
