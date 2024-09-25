@@ -43,11 +43,27 @@ const Footer: React.FC = () => {
 
   return (
     <footer
-      className={'bg-dev-dark-100 text-white fixed left-0 bottom-0 w-full text-center font-sans'}
+      className={'bg-dev-dark-200 text-white fixed left-0 bottom-0 w-full text-center font-sans'}
     >
-      <div className="input-button-container">
-        <input type="text" placeholder="Your email address" />
-        <button className="bg-dev-blue-100 text-sm py-3 px-7 rounded-3xl">Sign Up</button>
+      <div className="container flex flex-row mx-auto justify-around content-between border-b border-dev-dark-100 py-16">
+        <div className="text-left">
+          <h2 className="text-2xl">Join BoxCar</h2>
+          <p className="text-base">Receive pricing updates, shopping tips & more!</p>
+        </div>
+
+        <div className="relative inline-block">
+          <div className="grow">
+            <input
+              type="text"
+              placeholder="Your email address"
+              className="w-full rounded-full px-4 py-3 pr-72 text-white bg-dev-dark-100 focus:outline-none"
+            />
+          </div>
+
+          <span className="absolute top-0 right-0 z-50">
+            <button className="bg-dev-blue-100 text-sm py-3 px-7 rounded-3xl">Sign Up</button>
+          </span>
+        </div>
       </div>
 
       <div className="container m-auto text-left">
