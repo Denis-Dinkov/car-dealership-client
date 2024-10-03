@@ -1,5 +1,14 @@
+import Footer from '@/components/Footer/Footer';
+import { HomeSearch } from '@/components/HomeSearch';
+import Navbar from '@/components/Navbar';
+
 const Home = () => {
-  return <div>asdasdas</div>;
+  return (
+    <>
+      <HomeSearch />
+      <Footer />
+    </>
+  );
 };
 
 export default Home;

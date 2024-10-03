@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer
-      className={'bg-dev-dark-100 text-white fixed left-0 bottom-0 w-full text-center font-sans'}
+      className={'bg-dev-dark-100 text-white w-full text-center font-sans'}
     >
       <div className="input-button-container">
         <input type="text" placeholder="Your email address" />

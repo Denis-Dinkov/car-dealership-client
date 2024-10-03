@@ -1,22 +1,31 @@
-import Footer from "../Footer/Footer"
-import Navbar from "../Navbar";
+import { type CSSProperties, Suspense, useRef } from 'react';
 
-const Layout = ({ children }) => {
-  return (
-    <div>
-      <Navbar />
-      <div
-        style={{
-          backgroundImage: "url('https://demoapus1.com/boxcar/wp-content/uploads/2023/10/slider1.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh", // Adjust height as needed
-        }}
-      ></div>
-      {children}
-      {/* <Footer /> */}
-    </div>
-  )
+import { cn } from '@/utils/helpers';
+
+import Navbar from '../Navbar';
+import { Outlet } from 'react-router-dom';
+
+interface ILayoutBasic {
+  classNames?: string;
+  hasFooter: boolean;
 }
 
-export default Layout;
+export const LayoutBasic = (props: ILayoutBasic) => {
+  const { classNames, hasFooter } = props;
+
+  const refScrollArea = useRef<HTMLDivElement>(null);
+
+  return (
+    <Suspense>
+      <div className="grid max-h-screen min-h-screen grid-rows-layout overflow-hidden">
+        <Navbar />
+        <div ref={refScrollArea} className={cn('', classNames)}>
+          <Outlet />
+        </div>
+        {/* {hasFooter && <Footer />} */}
+      </div>
+    </Suspense>
+  );
+};
+
+LayoutBasic.displayName = 'LayoutBasic';
